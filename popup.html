@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ad blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-menu">
+        <ul>
+          <li id="privacy-li">Privacy</li>
+          <li class="close-sidebar">
+            <i class="fa fa-close" style="font-size: 48px; color: red"></i>
+          </li>
+          <!-- Add more menu items as needed -->
+        </ul>
+      </div>
+
+      <div class="image-container">
+        <img src="images/icon128.png" alt="" />
+      </div>
+
+      <div class="three-dot">
+        <i class="fa fa-ellipsis-v" style="font-size: 38px; color: red"></i>
+      </div>
+
+      <div id="userconsentOninstalled">
+        <div class="text">
+          <h3 class="terms-heading">Want to use safe browsing?</h3>
+           <p>To enable us to provide you with our safe browsing, we need to access and collect certain information, such as: click stream data, and IP address.</p>
+
+        <p>In addition, subject to your consent through the prominent notice, we will be accessing and collecting your web browsing data that includes information on: clickstream data</p>
+
+        <p>We share this web browsing data in an aggregated, anonymized format to improve our services.</p>
+
+        <p>We wish to make it clear, we do not want to know your identity, preferences or any information about you personally, all as detailed in the 
+        <a href="https://www.blockyoutubeads.com/privacy-policy" target="_blank">privacy policy</a>.</p><br><br>
+          
+        </div>
+        <div class="userconsent-btn">
+          <div class="decline-btn"><button>Decline</button></div>
+          <div class="accept-btn"><button>Accept</button></div>
+        </div>
+      </div>
+
+      <div id="userconsent">
+        <div class="text">
+          <h3 class="terms-heading">Privacy Policy</h3>
+          <p id="closePrivacy">
+            <i class="fa fa-close" style="font-size: 28px; color: black"></i>
+          </p>
+          <p>
+            To enhance our service and offer you an improved version of the
+            extension with added support for more websites, we
+            require access to and collection of data regarding the web pages you
+            visit. Please rest assured that we will not gather any personal or
+            sensitive information. You can choose to opt-in or opt-out, as this
+            is optional.
+          </p>
+           <p>We want to make it explicitly clear that we have no intention of
+            obtaining information about your identity, preferences, or any
+            personal details about you. This commitment is outlined in our
+            <a href="" target="_blank">privacy policy</a>.</p>
+             <p>
+            We want to make it explicitly clear that we have no intention of
+            obtaining information about your identity, preferences, or any
+            personal details about you.
+          </p>
+          <div class="userconsent-btn">
+            <form class="setting">
+              <input
+                type="checkbox"
+                id="privacyToggle"
+                name="privacyToggle"
+                class="switch-input"
+              />
+              <label for="privacyToggle" class="switch-label"
+                >Safe Browsing</label
+              >
+            </form>
+          </div>
+          <!-- google analytics -->
+
+          <p>
+           
+          </p>
+
+          <div class="userconsent-btn">
+            <form class="setting">
+              <input
+                type="checkbox"
+                id="analyticsToggle"
+                name="analyticsToggle"
+                class="switch-input"
+              />
+              <label for="analyticsToggle" class="switch-label"
+                >Google Analytics</label
+              >
+            </form>
+          </div>
+
+          <div class="userconsent-btn">
+            <form class="setting">
+              <input
+                type="checkbox"
+                id="dataToggle"
+                name="dataToggle"
+                class="switch-input"
+              />
+              <!--
+              <label for="dataToggle" class="switch-label">Data Collection</label> -->
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <form class="setting">
+        <input type="checkbox" id="ads" name="ads" class="switch-input" />
+        <label for="ads" class="switch-label"
+          ><span>YouTube Ads Blocking</span></label
+        >
+      </form>
+
+      <!-- for google banner ad blocking -->
+
+      <form class="setting3">
+        <input
+          type="checkbox"
+          id="google_banner"
+          name="google_banner"
+          class="switch-input"
+        />
+        <label for="google_banner" class="switch-label"
+          ><span>Banner Ads Blocking</span></label
+        >
+      </form>
+
+      <!-- for safe browsing -->
+
+      <form class="setting2">
+        <input type="checkbox" id="safe" name="safe" class="switch-input" />
+        <label for="safe" class="switch-label"
+          ><span>Safe Browsing Mode</span></label
+        >
+      </form>
+
+      <div class="counter">
+        <div class="ads-counter">
+          <span>Total Ads Blocked: </span>
+          <span id="ads-counter-num"></span>
+        </div>
+
+        <div class="safe-counter">
+          <span>Harmful Sites: </span>
+          <span id="safe-counter-num"></span>
+        </div>
+      </div>
+
+      <!-- <div class="btn">
+        <button id="runCodeButton"></button>
+      </div> -->
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
